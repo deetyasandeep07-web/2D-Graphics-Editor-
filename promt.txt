@@ -1,0 +1,58 @@
+=========================================
+USER PROMPT
+=========================================
+Write a 2d graphics editor using * and  _.
+Write functions to draw a circle, rectangle, line, and triangle.
+You should be able to
+      add objects to the picture,
+      delete objects from the picture, and
+       modify objects in the picture.
+Use a 2d array of characters to store the picture.
+Write a function to display the picture.
+-----------------------------------------
+give c programming code
+-----------------------------------------
+=========================================
+ANTIGRAVITY RESPONSE
+=========================================
+I have created a fully featured **2D ASCII Graphics Editor** written in **C** featuring drawing functions, custom character grid canvas, and full CRUD (Add/Delete/Modify) operations. 
+I have also developed a high-fidelity **Web-based GUI version** (HTML/CSS/JS) using the exact same rasterization algorithms so that you can draw, modify, and export ASCII art directly in any browser without needing to compile code locally.
+Please set the project folder as your active workspace:
+> [!TIP]
+> You should set the new project subdirectory 2d-ascii-graphics-editor (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor) as your active workspace.
+---
+### Key Artifacts Created
+- **Implementation Plan**: Details on algorithms and components are saved in implementation_plan.md (file:///C:/Users/deety/.gemini/antigravity/brain/67ffdea0-0f6d-4db2-9371-1ca53079e3f0/implementation_plan.md).
+- **Execution Walkthrough**: The technical design, vector logic details, and features are explained in walkthrough.md (file:///C:/Users/deety/.gemini/antigravity/brain/67ffdea0-0f6d-4db2-9371-1ca53079e3f0/walkthrough.md).
+- **Task List**: Progress tracking is available in task.md (file:///C:/Users/deety/.gemini/antigravity/brain/67ffdea0-0f6d-4db2-9371-1ca53079e3f0/task.md).
+---
+### Project Files Overview
+1. **main.c (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/main.c)**:
+   - Implements the C program.
+   - Defines a `char canvas[HEIGHT][WIDTH]` to store the picture (where background characters are `_` and borders are `*`).
+   - Standard drawing algorithms:
+     - draw_line (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/main.c#L101-L125) (Bresenham's line algorithm)
+     - draw_circle (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/main.c#L143-L162) (Bresenham's Midpoint Circle algorithm)
+     - draw_rectangle (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/main.c#L165-L179) (draws top, bottom, left, and right borders)
+     - draw_triangle (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/main.c#L182-L186) (draws three connected lines between coordinates)
+     - display_canvas (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/main.c#L211-L229) (draws upper/lower and side borders around the picture and outputs the 2D grid)
+   - Features robust input validation using get_int_input (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/main.c#L55-L71) to ensure menu and coordinate selections do not lead to infinite loops.
+   - Preserves shapes dynamically in a list so that you can easily list, modify, or delete them before re-rendering the output.
+   - Pre-loads a demo scene (a house base, triangle roof, and circular sun) upon startup.
+2. **Web GUI Suite**:
+   - **index.html (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/index.html)**: Sets up the panel structures, controls, inputs, and a retro CRT green-glow terminal rendering screen.
+   - **styles.css (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/styles.css)**: Neon glowing, glassmorphic dark-theme styles that emulate code terminal monitors.
+   - **app.js (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/app.js)**: Holds the canvas state, bindings, and identical C-equivalent drawing logic (drawLine, drawCircle, drawRectangle, drawTriangle) for Web browsers.
+3. **README.md (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/README.md)**: Full compilation, installation, and operation manual.
+---
+### Compilation and Execution instructions
+#### C Application:
+Compile it using your terminal's C compiler (like GCC or Clang):
+```bash
+gcc -o editor main.c -Wall
+```
+To run the editor:
+- **Windows**: `.\editor.exe`
+- **Linux/macOS**: `./editor`
+#### Web GUI Application:
+Simply open **index.html (file:///C:/Users/deety/.gemini/antigravity/scratch/2d-ascii-graphics-editor/index.html)** in any modern web browser (Double click or drag it into Chrome/Edge/Firefox) to design shapes interactively!
